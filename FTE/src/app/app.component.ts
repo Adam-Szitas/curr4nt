@@ -10,7 +10,7 @@ import { catchError, map, of } from 'rxjs';
 export class AppComponent {
   constructor(private http: HttpClient){}
 
-  title = 'FTE Application';
+  public title = 'FTE Application';
   public returnedString: string = "";
 
   public getHelloWorldFromNest(): void{

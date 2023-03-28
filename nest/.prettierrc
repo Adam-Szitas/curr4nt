@@ -1,4 +1,17 @@
 {
+  "tabWidth": 4,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "printWidth": 140,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular",
+        "htmlWhitespaceSensitivity": "scss"
+      }
+    }
+  ]
 }
