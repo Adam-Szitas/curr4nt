@@ -4,7 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './mongo/mongo.module';
 
-import * as env from './environment/env.js';
+import { env } from './environment/env.js';
 
 @Module({
   imports: [

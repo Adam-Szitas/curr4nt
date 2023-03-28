@@ -1,4 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Gender } from '../interfaces/user/user.types';
 
 @Schema()
 export class User {
@@ -7,12 +8,13 @@ export class User {
   @Prop()
   public lastName: string;
   @Prop()
-  public age: number;
+  public birthDate: Date;
+  @Prop()
+  public gender: Gender;
   @Prop()
   public nickName: string;
   @Prop()
   public password: string;
-  
 }
 
 
