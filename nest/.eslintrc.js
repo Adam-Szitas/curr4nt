@@ -14,6 +14,7 @@ const defaultTsRules = {
     'simple-import-sort/imports': 2,
     'simple-import-sort/exports': 2,
     '@typescript-eslint/array-type': 2,
+    '@typescript-eslint/no-explicit-any': 2,
 };
 
 const commonTsSetup = {

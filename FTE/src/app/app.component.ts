@@ -1,31 +1,35 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { catchError, map, of } from 'rxjs';
+import { HelloWorld } from './interfaces/app/app.types';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private http: HttpClient){}
+    constructor(private http: HttpClient) {}
 
-  public title = 'FTE Application';
-  public returnedString: string = "";
+    public title = 'FTE Application';
+    public returnedString = '';
 
-  public getHelloWorldFromNest(): void{
-    const url: string = 'http://localhost:3000';
-    const headers: HttpHeaders = new HttpHeaders();
-    headers.append('content-type', 'text/html');
+    public getHelloWorldFromNest(): void {
+        const url = 'http://localhost:3000';
+        const headers: HttpHeaders = new HttpHeaders();
+        headers.append('content-type', 'text/html');
 
-    this.http.get(url, {headers: headers}).pipe(
-      map((data: any) => {
-        this.returnedString = data.text;
-      }),
-      catchError(error => {
-        console.error(error);
-        return of(true);
-      })
-    ).subscribe()
-  }
+        this.http
+            .get<HelloWorld>(url, { headers })
+            .pipe(
+                map((data: HelloWorld) => {
+                    this.returnedString = data.text;
+                }),
+                catchError((error) => {
+                    console.error(error);
+                    return of(true);
+                })
+            )
+            .subscribe();
+    }
 }

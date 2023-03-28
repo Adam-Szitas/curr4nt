@@ -12,6 +12,7 @@ export class User {
   public nickName: string;
   @Prop()
   public password: string;
+  
 }
 
 
