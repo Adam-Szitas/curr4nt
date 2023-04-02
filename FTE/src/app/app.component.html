@@ -2,3 +2,34 @@
 
 <div class="output">{{ returnedString }}</div>
 <button type="button" (click)="getHelloWorldFromNest()">Get string</button>
+<div class="container">
+  <form class="register_form" [formGroup]="registerForm" (ngSubmit)="register()">
+
+    <div class="field">
+      <label for="fisrtName">First name</label>
+      <input formControlName="firstName" type="text" name="firstName" id="firstName">
+    </div>
+    <div class="field">
+      <label for="lastName">Last name</label>
+      <input formControlName="lastName" type="text" name="lastName" id="lastName">
+    </div>
+    <div class="field">
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender" formControlName="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="nickName">Nickname</label>
+      <input formControlName="nickName" type="text" name="nickName" id="nickName">
+    </div>
+    <div class="field">
+      <label for="birthDate">Birth date</label>
+      <input formControlName="birthDate" type="date" name="birthDate" id="birthDate">
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+

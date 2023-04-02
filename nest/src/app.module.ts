@@ -4,11 +4,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './mongo/mongo.module';
 
-import { env } from './environment/env.js';
+// import { env } from './environment/env.js';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(`mongodb://${env.localhost.DB_USER}:${env.localhost.DB_PW}@localhost:27017`, {
+    MongooseModule.forRoot(`mongodb://localhost:27017/nestDB`, {
       dbName: 'nestDB',
     }),
     UserModule,
