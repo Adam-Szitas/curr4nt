@@ -36,3 +36,10 @@ form.register_form {
 .margin-y-input_field {
     margin: 15px 0;
 }
+
+div.button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}

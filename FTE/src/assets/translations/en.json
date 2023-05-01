@@ -1,0 +1,8 @@
+{
+    "components": {
+        "button": {
+            "submit": "Submit",
+            "next": "Next"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+div.wrapper {
+    display: flex;
+}
+
+button {
+    border: 0 !important;
+    color: whitesmoke;
+    padding: 4px 12px;
+    transition: background-color ease-in-out 0.2s;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.bg-green {
+        background-color: hsl(120, 100%, 24%);
+        &:hover {
+            background-color: hsl(120, 100%, 18%);
+        }
+    }
+    &.bg-blue {
+        background-color: hsl(218, 69%, 29%);
+        &:hover {
+            background-color: hsl(218, 69%, 23%);
+        }
+    }
+    &.bg-red {
+        background-color: hsl(0, 58%, 37%);
+        &:hover {
+            background-color: hsl(0, 58%, 31%);
+        }
+    }
+    &.bg-orange {
+        background-color: hsl(33, 98%, 46%);
+        &:hover {
+            background-color: hsl(33, 98%, 40%);
+        }
+    }
+}

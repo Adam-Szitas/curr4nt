@@ -6,6 +6,7 @@ import { AuthService } from './services/auth/auth.service';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { RegisterForm } from './interfaces/auth/auth.types';
+import { EmitterType } from './components/types/fte-button.types';
 
 @Component({
     selector: 'app-root',
@@ -52,5 +53,9 @@ export class AppComponent implements OnInit {
         if (this.registerForm.valid) {
             this.authService.register(this.registerForm.getRawValue() as RegisterForm).subscribe();
         }
+    }
+
+    public buttonClicked(event: EmitterType) {
+        console.log(event);
     }
 }

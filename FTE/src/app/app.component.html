@@ -33,3 +33,7 @@
   </form>
 </div>
 
+<div class="button-container">
+  <app-fte-button [type]="'SUBMIT'" [text]=" 'components.button.submit' | translate " (buttonClicked)="buttonClicked($event)"></app-fte-button>
+  <app-fte-button [text]=" 'components.button.next' | translate " (buttonClicked)="buttonClicked($event)"></app-fte-button>
+</div>
